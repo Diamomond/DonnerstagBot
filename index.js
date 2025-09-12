@@ -1,6 +1,7 @@
 const { createInterface } = require('node:readline');
 const { execSync } = require('child_process');
 const fetch = require('node-fetch');
+const moment = require ('moment');
 const { Client, Routes, GatewayIntentBits } = require('discord.js');
 
 
@@ -25,9 +26,12 @@ const ping = {
   description: 'Pings the bot and shows the latency'
 };
 
-const berlinTime = new Date().toLocaleString("en-US", { timeZone: "Europe/Berlin" });
 
-const today = new Date(berlinTime).getDay(); 
+
+//const today = new Date().getDay(); // Get the current day (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+const bakuTime = new Date().toLocaleString("en-US", { timeZone: "Europe/Berlin" });
+
+const today = new Date(bakuTime).getDay(); 
 
 const commands = [donnerstag, ping];
 
@@ -38,10 +42,25 @@ if (today === 4) {
     if (message.content.toLowerCase().includes('donnerstag')) {
     message.channel.send("https://lukaseins.s-ul.eu/dVTE4cgZ")
     }});
+  client.on("messageCreate", (message) =>{
+    if (message.author.bot){ return;}
+    if (message.content.toLowerCase().includes('dönerstag')) {
+    message.channel.send("https://lukaseins.s-ul.eu/2ZbxOb17")
+    }});
+   client.on("messageCreate", (message) =>{
+	   if (message.author.bot){ return;}
+	   if (message.content.toLowerCase().includes('dnerstag')) {
+		   message.channel.send("https://lukaseins.s-ul.eu/e0fAXBlP")
+	   }});
+ client.on("messageCreate", (message) =>{
+	   if (message.author.bot){ return;}
+	   if (message.content.toLowerCase().includes('donnersday')) {
+		   message.channel.send("https://lukaseins.s-ul.eu/GVvs8xtI")
+	   }});
 client.on('interactionCreate', (interaction) => {
   if (interaction.commandName === 'ping') {
     interaction.reply(`Latency is ${Date.now() - interaction.createdTimestamp}ms. API Latency is ${Math.round(client.ws.ping)}ms`);  
-  } else if(interaction.commandName === 'donnerstag') {
+  } else if(interaction.commandName === 'donnerstag') { // This is the example command's name!
     interaction.reply('https://lukaseins.s-ul.eu/dVTE4cgZ');
   } 
 });
@@ -50,8 +69,19 @@ client.on('interactionCreate', (interaction) => {
     if (message.author.bot){ return;}
     if (message.content.toLowerCase().includes('donnerstag')) {
     message.channel.send("Es ist noch nicht Donnerstag du Hurensohn.")
-    }});
+    }
+    if (message.content.toLowerCase().includes('dönerstag')){
+       message.channel.send("Döner? Begebe dich lieber mal in die Eisenbude Kollege!")
+    }
+if (message.content.toLowerCase().includes('donnersday')){
+       message.channel.send("Hold your horses! Der day ist noch nicht gekommen. Halt den tea noch eine Weile warm!")
+    }
+    if (message.content.toLowerCase().includes('dnerstag')){
+      message.channel.send("JOOONGE es ist doch noch gar nicht so weit, entspann dich...")
+   }
+  });
 }
+
 
 if (today === 1){
   client.on("messageCreate", (message) =>{
@@ -59,6 +89,14 @@ if (today === 1){
 	if (message.content.toLowerCase().includes('montag')) {
 		message.channel.send("und so beginnt es...")
 		message.channel.send("https://lukaseins.s-ul.eu/howKEqfv")
+	}});
+}
+
+if (today === 2){
+  client.on("messageCreate", (message) =>{
+	if (message.author.bot){return;}
+	if (message.content.toLowerCase().includes('dienstag')) {
+		message.channel.send("Das D steht bereit, noch 2 Tage warten, dann steht das onnerstag auch bereit")
 	}});
 }
 
@@ -70,6 +108,7 @@ if (today === 3){
     }});
 }
 
+
 if (today === 5){
   client.on("messageCreate", (message) =>{
     if (message.author.bot){ return;}
@@ -78,5 +117,20 @@ if (today === 5){
     }});
 }
 
+if (today === 6){
+  client.on("messageCreate", (message) =>{
+    if (message.author.bot){ return;}
+    if (message.content.toLowerCase().includes('samstag')) {
+    message.channel.send("Ein Tag der Ruhe, wie ihn sich jeder von uns nun reglich verdient hat, entspann dich an diesem wundervollen Samstag!")
+    }});
+}
+
+if (today === 7){
+  client.on("messageCreate", (message) =>{
+    if (message.author.bot){ return;}
+    if (message.content.toLowerCase().includes('sonntag')) {
+    message.channel.send("Morgen beginnt zwar erst der Countdown, verzweifel jedoch nicht! Bald schon feiern wir wieder zusammen...")
+    }});
+}
 //make sure this line is the last line
-client.login('token'); //login bot using token
+client.login(''); //login bot using token
