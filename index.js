@@ -52,6 +52,11 @@ if (today === 4) {
 	   if (message.content.toLowerCase().includes('dnerstag')) {
 		   message.channel.send("https://lukaseins.s-ul.eu/e0fAXBlP")
 	   }});
+client.on("messageCreate", (message) =>{
+	   if (message.author.bot){ return;}
+	   if (message.content.toLowerCase().includes('dänemark')) {
+		   message.channel.send("https://lukaseins.s-ul.eu/crwzyyzy")
+	   }});
  client.on("messageCreate", (message) =>{
 	   if (message.author.bot){ return;}
 	   if (message.content.toLowerCase().includes('donnersday')) {
@@ -75,6 +80,9 @@ client.on('interactionCreate', (interaction) => {
     }
 if (message.content.toLowerCase().includes('donnersday')){
        message.channel.send("Hold your horses! Der day ist noch nicht gekommen. Halt den tea noch eine Weile warm!")
+       }
+if (message.content.toLowerCase().includes('dänemark')){
+       message.channel.send("Du bist an Bord, bevor der Kahn ablegt, makker!")
     }
     if (message.content.toLowerCase().includes('dnerstag')){
       message.channel.send("JOOONGE es ist doch noch gar nicht so weit, entspann dich...")
@@ -90,6 +98,11 @@ if (today === 1){
 		message.channel.send("und so beginnt es...")
 		message.channel.send("https://lukaseins.s-ul.eu/howKEqfv")
 	}});
+	  client.on("messageCreate", (message) =>{
+    if (message.author.bot){ return;}
+    if (message.content.toLowerCase().includes('monday')) {
+    message.channel.send("https://tenor.com/view/mondays-uh-oh-weeks-rough-week-gif-4480966")
+    }});
 }
 
 if (today === 2){
@@ -108,12 +121,16 @@ if (today === 3){
     }});
 }
 
-
-if (today === 5){
+if (today === 5) {
   client.on("messageCreate", (message) =>{
     if (message.author.bot){ return;}
     if (message.content.toLowerCase().includes('freitag')) {
-    message.channel.send("Jetzt beginnt eine lange Woche des Wartens, vergiss dein Lächeln trotzdem nicht...")
+    message.channel.send("Jetzt beginnt eine lange Woche des Wartens, vergiss dein Lächeln trotzdem nicht... https://lukaseins.s-ul.eu/9DLzlJsB")
+    }});
+  client.on("messageCreate", (message) =>{
+    if (message.author.bot){ return;}
+    if (message.content.toLowerCase().includes('flytag')) {
+    message.channel.send("donnerstag out https://lukaseins.s-ul.eu/OIdVqgC8")
     }});
 }
 
@@ -125,12 +142,14 @@ if (today === 6){
     }});
 }
 
-if (today === 7){
+if (today === 0){
   client.on("messageCreate", (message) =>{
     if (message.author.bot){ return;}
     if (message.content.toLowerCase().includes('sonntag')) {
-    message.channel.send("Morgen beginnt zwar erst der Countdown, verzweifel jedoch nicht! Bald schon feiern wir wieder zusammen...")
+    message.channel.send("Sonntag markiert das Ende der Woche. Genieß deinen freien Tag damit du bis zum nächsten, frischen Donnerstag bei Kräften bist!")
     }});
 }
+
+
 //make sure this line is the last line
 client.login(''); //login bot using token
