@@ -40,33 +40,33 @@ if (today === 4) {
   client.on("messageCreate", (message) =>{
     if (message.author.bot){ return;}
     if (message.content.toLowerCase().includes('donnerstag')) {
-    message.channel.send("https://lukaseins.s-ul.eu/dVTE4cgZ")
+    message.channel.send("https://github.com/Diamomond/DonnerstagBot/blob/1e57c010a8ca5ccac36059ad831b8953c40eacf2/media/Donnerstag.png?raw=true")
     }});
   client.on("messageCreate", (message) =>{
     if (message.author.bot){ return;}
     if (message.content.toLowerCase().includes('dönerstag')) {
-    message.channel.send("https://lukaseins.s-ul.eu/2ZbxOb17")
+    message.channel.send("https://github.com/Diamomond/DonnerstagBot/blob/9b46fdd9c1dd30b851958b307b977c26788dd27c/media/d%C3%B6nerstag.png?raw=true")
     }});
    client.on("messageCreate", (message) =>{
 	   if (message.author.bot){ return;}
 	   if (message.content.toLowerCase().includes('dnerstag')) {
-		   message.channel.send("https://lukaseins.s-ul.eu/e0fAXBlP")
+		   message.channel.send("https://github.com/Diamomond/DonnerstagBot/blob/0549c332ed9b6bdcf3dc56501cbf07651bc505f3/media/dnerstag.png?raw=true")
 	   }});
 client.on("messageCreate", (message) =>{
 	   if (message.author.bot){ return;}
 	   if (message.content.toLowerCase().includes('dänemark')) {
-		   message.channel.send("https://lukaseins.s-ul.eu/crwzyyzy")
+		   message.channel.send("https://github.com/Diamomond/DonnerstagBot/blob/13a1c6547f425e2a36ad4010fdefcb91b4e3415f/media/d%C3%A4nemark.png?raw=true")
 	   }});
  client.on("messageCreate", (message) =>{
 	   if (message.author.bot){ return;}
 	   if (message.content.toLowerCase().includes('donnersday')) {
-		   message.channel.send("https://lukaseins.s-ul.eu/GVvs8xtI")
+		   message.channel.send("https://github.com/Diamomond/DonnerstagBot/blob/0438e1ac634ce830b03290d3c3f5ebb3fe79be53/media/donnersday.png?raw=true")
 	   }});
 client.on('interactionCreate', (interaction) => {
   if (interaction.commandName === 'ping') {
     interaction.reply(`Latency is ${Date.now() - interaction.createdTimestamp}ms. API Latency is ${Math.round(client.ws.ping)}ms`);  
   } else if(interaction.commandName === 'donnerstag') { // This is the example command's name!
-    interaction.reply('https://lukaseins.s-ul.eu/dVTE4cgZ');
+    interaction.reply('https://github.com/Diamomond/DonnerstagBot/blob/0438e1ac634ce830b03290d3c3f5ebb3fe79be53/media/Donnerstag.png?raw=true');
   } 
 });
 } else {
@@ -96,7 +96,7 @@ if (today === 1){
 	if (message.author.bot){return;}
 	if (message.content.toLowerCase().includes('montag')) {
 		message.channel.send("und so beginnt es...")
-		message.channel.send("https://lukaseins.s-ul.eu/howKEqfv")
+		message.channel.send("https://github.com/Diamomond/DonnerstagBot/blob/eeee844df4d8f46b85ea233d4ebcb53348502133/media/montag.mp4?raw=true")
 	}});
 	  client.on("messageCreate", (message) =>{
     if (message.author.bot){ return;}
@@ -125,12 +125,17 @@ if (today === 5) {
   client.on("messageCreate", (message) =>{
     if (message.author.bot){ return;}
     if (message.content.toLowerCase().includes('freitag')) {
-    message.channel.send("Jetzt beginnt eine lange Woche des Wartens, vergiss dein Lächeln trotzdem nicht... https://lukaseins.s-ul.eu/9DLzlJsB")
+    message.channel.send("Jetzt beginnt eine lange Woche des Wartens, vergiss dein Lächeln trotzdem nicht... https://github.com/Diamomond/DonnerstagBot/blob/eeee844df4d8f46b85ea233d4ebcb53348502133/media/lynch.mp4?raw=true")
     }});
   client.on("messageCreate", (message) =>{
     if (message.author.bot){ return;}
     if (message.content.toLowerCase().includes('flytag')) {
-    message.channel.send("donnerstag out https://lukaseins.s-ul.eu/OIdVqgC8")
+    message.channel.send("donnerstag out https://github.com/Diamomond/DonnerstagBot/blob/eeee844df4d8f46b85ea233d4ebcb53348502133/media/viktor.mp4?raw=true")
+    }});
+   client.on("messageCreate", (message) =>{
+    if (message.author.bot){ return;}
+    if (message.content.toLowerCase().includes('freitittytag')) {
+    message.channel.send("https://github.com/Diamomond/DonnerstagBot/blob/eeee844df4d8f46b85ea233d4ebcb53348502133/media/freitittytag.mp4?raw=true")
     }});
 }
 
@@ -150,6 +155,5 @@ if (today === 0){
     }});
 }
 
-
 //make sure this line is the last line
-client.login(''); //login bot using token
+client.login(' '); //login bot using token
